@@ -17,7 +17,7 @@ function Customize({
 }) {
     return (
         <div className="bg-white rounded-xl shadow-md p-6 w-2xl">
-            <h2 className="text-xl font-semibold mb-4">Customize your password</h2>
+            <h2 className="text-2xl font-semibold mb-4">Customize your password</h2>
             
             <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -44,7 +44,7 @@ function Customize({
             </div>
 
             <div className="mb-4">
-                <div className="flex items-center gap-4 mb-2">
+                <div className="flex items-center font-mono gap-7 mb-2">
                     <label className="flex items-center gap-2">
                         <input 
                             type="radio"
@@ -79,7 +79,7 @@ function Customize({
             </div>
 
 
-            <div className="flex flex-wrap gap-4 mb-6">
+            <div className="flex flex-wrap font-mono gap-7 mb-6">
                 <label className="flex items-center gap-2">
                     <input
                         type="checkbox"
