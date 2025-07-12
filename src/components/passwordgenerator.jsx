@@ -53,9 +53,9 @@ function PasswordGenerate() {
             <div className="flex justify-center text-white text-5xl font-bold">
                 <span>Generate Your Password's In Seconds!</span>
             </div>
-            <div className="flex flex-col items-center justify-between p-30">
+            <div className="flex flex-col items-center justify-between p-25">
 
-                <div className="relative w-full max-w-2xl mb-3">
+                <div className="relative w-full max-w-2xl mb-5">
                     <div className="bg-white rounded-lg shadow-md px-6 py-4 text-center font-medium text-gray-800 text-base break-words">
                         {generatedPassword || "🔐 Your password will be generated here!"}
                     </div>
