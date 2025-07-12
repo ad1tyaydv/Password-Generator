@@ -50,10 +50,10 @@ function PasswordGenerate() {
 
     return (
         <div className="relative h-full bg-[#133251]">
-            <div className="flex justify-center text-white text-5xl font-bold">
+            <div className="flex justify-center text-white text-5xl font-bold p-5">
                 <span>Generate Your Password's In Seconds!</span>
             </div>
-            <div className="flex flex-col items-center justify-between p-25">
+            <div className="flex flex-col items-center justify-between p-20">
 
                 <div className="relative w-full max-w-2xl mb-5">
                     <div className="bg-white rounded-lg shadow-md px-6 py-4 text-center font-medium text-gray-800 text-base break-words">
