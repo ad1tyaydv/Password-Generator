@@ -1,4 +1,5 @@
-
+import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function Customize({
     onGenerate,
@@ -58,7 +59,7 @@ function Customize({
                     <label className="flex items-center gap-2">
                         <input 
                             type="radio" 
-                            name="complexity" 
+                            name="complexity"
                             className="accent-red-600"
                             checked={complexity === "read"}
                             onChange={() => setComplexity("read")}
@@ -123,12 +124,34 @@ function Customize({
             </div>
 
                 <div className="p-8 flex justify-center">
+                    <div className="text-3xl px-25">
+                        <a
+                            href="https://www.linkedin.com/in/aditya-yadav-612695323/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-900"
+                        >
+                            <FaLinkedin />
+                        </a>
+                    </div>
+
                     <button
                         onClick={onGenerate}
-                        className="bg-red-600 text-white px-8 py-2 rounded hover:bg-red-700 transition-all duration-100"
+                        className="bg-red-600 text-white px-8 py-2 rounded-xl hover:bg-red-700 transition-all duration-100"
                     >
                         Generate
                     </button>
+
+                    <div className="text-4xl px-25">
+                        <a
+                            href="https://github.com/ad1tyaydv"
+                            target="_blank"
+                            rel="noopener noreferer"
+                            className="text-gray-900"
+                        >
+                            <FaGithubSquare />
+                        </a>
+                    </div>
                 </div>
                 
             </div>

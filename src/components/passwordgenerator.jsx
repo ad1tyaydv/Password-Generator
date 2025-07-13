@@ -3,7 +3,6 @@ import { useState } from "react";
 import { FaCopy } from "react-icons/fa";
 
 function PasswordGenerate() {
-    // States to manage password, settings and clipboard copy status
     const [generatedPassword, setGeneratedPassword] = useState("");
     const [copied, setCopied] = useState(false);
     const [length, setLength] = useState(16);
@@ -13,7 +12,6 @@ function PasswordGenerate() {
     const [includeSymbols, setIncludeSymbols] = useState(true);
     const [complexity, setComplexity] = useState("all");
 
-    // Function to generate password based on selected options
     function generatedpassword() {
         let options = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*(){}_[]";
 
@@ -22,7 +20,7 @@ function PasswordGenerate() {
         } else if (complexity === "read") {
             options = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789";
         } else {
-            options = ""; // Reset if 'all' is selected
+            options = "";
             if (includeUppercase) options += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             if (includeLowercase) options += "abcdefghijklmnopqrstuvwxyz";
             if (includeNumbers) options += "0123456789";
@@ -34,7 +32,6 @@ function PasswordGenerate() {
             return;
         }
 
-        // Build random password using selected options
         let token = "";
         for (let i = 0; i < length; i++) {
             token += options[Math.floor(Math.random() * options.length)];
@@ -43,11 +40,10 @@ function PasswordGenerate() {
         setGeneratedPassword(token);
     }
 
-    // Copy password to clipboard
     function CopyButton() {
         navigator.clipboard.writeText(generatedPassword);
         setCopied(true);
-        setTimeout(() => setCopied(false), 1000); // Reset copy status after 1s
+        setTimeout(() => setCopied(false), 1000);
     }
 
     return (
@@ -74,7 +70,6 @@ function PasswordGenerate() {
                     )}
                 </div>
 
-                {/* Settings/Customize Panel */}
                 <Customize
                     onGenerate={generatedpassword}
                     length={length}
