@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { FaCopy, FaGithub, FaUserCircle } from "react-icons/fa";
+import { useRef, useState } from "react";
+import { FaCopy, FaGithub } from "react-icons/fa";
 import Customize from "./customize";
 import { APP_VERSION } from "../version";
 import TextFile from "./textfile";
@@ -13,6 +13,14 @@ export default function PasswordGenerate() {
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeSymbols, setIncludeSymbols] = useState(true);
   const [complexity, setComplexity] = useState("all");
+
+  const generatorRef = useRef(null);
+
+  function scrollToGenerator() {
+    if (generatorRef.current) {
+      generatorRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   function generatedpassword() {
     let options = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*(){}_[]";
@@ -57,6 +65,16 @@ export default function PasswordGenerate() {
         <TextFile />
       </div>
 
+      {/* Mobile-only generate button */}
+      <div className="mt-6 sm:mt-8 md:hidden w-full px-4">
+        <button
+          onClick={scrollToGenerator}
+          className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg w-full transition-colors duration-200"
+        >
+          Generate Password Now
+        </button>
+      </div>
+
       <div className="w-full md:w-1/2 lg:w-3/5 flex flex-col px-4 sm:px-6 md:px-8 py-6 sm:py-8">
         <header className="md:hidden py-4 text-center mt-4">
           <h1 className="text-white text-2xl sm:text-3xl font-bold">
@@ -64,18 +82,21 @@ export default function PasswordGenerate() {
           </h1>
         </header>
 
-        <main className="flex-1 flex flex-col items-center justify-center pb-6 sm:pb-8 w-full">
+        <main
+          ref={generatorRef}
+          className="flex-1 flex flex-col items-center justify-center pb-6 sm:pb-8 w-full"
+        >
           <div className="w-full max-w-2xl flex justify-end items-center gap-3 mt-4 mb-6 sm:mt-6 sm:mb-13">
             <a
-                href="https://github.com/ad1tyaydv/Password-Generator"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 border px-3 py-1.5 rounded-full hover:shadow-md bg-white text-sm font-medium mt-[-35px]"
+              href="https://github.com/ad1tyaydv/Password-Generator"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border px-3 py-1.5 rounded-full hover:shadow-md bg-white text-sm font-medium mt-[-35px]"
             >
-                <FaGithub className="text-lg" />
-                <span>Star Project</span>
+              <FaGithub className="text-lg" />
+              <span>Star Project</span>
             </a>
-            </div>
+          </div>
 
           <div className="w-full max-w-2xl mb-4 sm:mb-6 md:mb-8 relative">
             <div className="bg-white rounded-lg shadow-md px-4 py-4 md:px-6 md:py-5 text-center font-medium text-gray-800 break-all text-sm sm:text-base md:text-lg">

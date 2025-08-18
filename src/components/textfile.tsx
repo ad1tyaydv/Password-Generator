@@ -26,12 +26,6 @@ export default function TextFile() {
           <span className="text-sm sm:text-base md:text-lg">No password storage</span>
         </div>
       </div>
-
-      <div className="mt-6 sm:mt-8 md:hidden w-full">
-        <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg w-full transition-colors duration-200">
-          Generate Password Now
-        </button>
-      </div>
     </div>
   );
 }
