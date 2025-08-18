@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { FaCopy } from "react-icons/fa";
+import { FaCopy, FaGithub, FaUserCircle } from "react-icons/fa";
 import Customize from "./customize";
-import { APP_VERSION, LAST_UPDATED } from "../version";
-
+import { APP_VERSION } from "../version";
 import TextFile from "./textfile";
 
 export default function PasswordGenerate() {
@@ -51,30 +50,46 @@ export default function PasswordGenerate() {
 
   return (
     <div className="min-h-screen bg-[#133251] flex flex-col md:flex-row">
-      {/* Left Side (Hidden on mobile) */}
-        <div className="hidden md:flex md:w-1/2 lg:w-2/5 bg-[#133251]">
-            <TextFile />
-        </div>
-        <div className="md:hidden w-full bg-[#133251]">
-            <TextFile />
-        </div>
+      <div className="hidden md:flex md:w-1/2 lg:w-2/5 bg-[#133251]">
+        <TextFile />
+      </div>
+      <div className="md:hidden w-full bg-[#133251]">
+        <TextFile />
+      </div>
 
-      {/* Right Side */}
       <div className="w-full md:w-1/2 lg:w-3/5 flex flex-col px-4 sm:px-6 md:px-8 py-6 sm:py-8">
-        {/* Mobile Header */}
-        <header className="md:hidden py-4 text-center">
+        <header className="md:hidden py-4 text-center mt-4">
           <h1 className="text-white text-2xl sm:text-3xl font-bold">
             Password Generator
           </h1>
         </header>
 
         <main className="flex-1 flex flex-col items-center justify-center pb-6 sm:pb-8 w-full">
-          {/* Password Display */}
+          <div className="w-full max-w-2xl flex justify-end items-center gap-3 mt-4 mb-6 sm:mt-6 sm:mb-13">
+            <a
+                href="https://github.com/ad1tyaydv/Password-Generator"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 border px-3 py-1.5 rounded-full hover:shadow-md bg-white text-sm font-medium"
+            >
+                <FaGithub className="text-lg" />
+                <span>Star Project</span>
+            </a>
+
+                <a
+                    href="https://github.com/ad1tyaydv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl text-purple-400 hover:text-purple-500"
+                >
+                    <FaGithub />
+                </a>
+            </div>
+
           <div className="w-full max-w-2xl mb-4 sm:mb-6 md:mb-8 relative">
             <div className="bg-white rounded-lg shadow-md px-4 py-4 md:px-6 md:py-5 text-center font-medium text-gray-800 break-all text-sm sm:text-base md:text-lg">
               {generatedPassword || "🔐 Your password will appear here"}
             </div>
-
             {generatedPassword && (
               <button
                 onClick={CopyButton}
@@ -94,7 +109,6 @@ export default function PasswordGenerate() {
             )}
           </div>
 
-          {/* Customize Component */}
           <div className="w-full max-w-2xl">
             <Customize
               onGenerate={generatedpassword}
@@ -112,9 +126,10 @@ export default function PasswordGenerate() {
               setComplexity={setComplexity}
             />
           </div>
-            <div className="mt-6 text-center text-xs text-gray-400">
-                <p>Version: {APP_VERSION}</p>
-            </div>
+
+          <div className="mt-6 text-center text-xs text-gray-400">
+            <p>Version: {APP_VERSION}</p>
+          </div>
         </main>
       </div>
     </div>
