@@ -1,4 +1,4 @@
-
+import { APP_VERSION } from "../version";
 
 export default function TextFile() {
   return (
@@ -27,6 +27,9 @@ export default function TextFile() {
           <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-400 flex-shrink-0"></span>
           <span className="text-sm sm:text-base md:text-lg">No password storage</span>
         </div>
+        <div className="mt-auto pt-6 text-xs sm:text-sm text-gray-400">
+        <p>Password Generator v{APP_VERSION}</p>
+      </div>
       </div>
 
       
