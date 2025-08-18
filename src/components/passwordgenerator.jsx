@@ -70,7 +70,7 @@ export default function PasswordGenerate() {
                 href="https://github.com/ad1tyaydv/Password-Generator"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border px-3 py-1.5 rounded-full hover:shadow-md bg-white text-sm font-medium"
+                className="flex items-center gap-2 border px-3 py-1.5 rounded-full hover:shadow-md bg-white text-sm font-medium mt-[-35px]"
             >
                 <FaGithub className="text-lg" />
                 <span>Star Project</span>
