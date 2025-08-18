@@ -2,14 +2,14 @@ import { APP_VERSION } from "../version";
 
 export default function TextFile() {
   return (
-    <div className="flex flex-col justify-center items-start p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 text-white h-full w-full">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+    <div className="flex flex-col justify-center items-start p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16 text-white h-full w-full max-h-[90vh]">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
         <span className="block text-red-400">Strong.</span>
         <span className="block text-blue-300">Secure.</span>
         <span className="block text-green-300">Awesome.</span>
       </h1>
       
-      <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-md sm:max-w-lg md:max-w-xl">
+      <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl mb-6 sm:mb-8 max-w-md">
         Generate uncrackable passwords instantly with our advanced password generator.
         Perfect for all your online accounts and digital security needs.
       </p>
@@ -27,7 +27,7 @@ export default function TextFile() {
           <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-400 flex-shrink-0"></span>
           <span className="text-sm sm:text-base md:text-lg">No password storage</span>
         </div>
-        <div className="mt-auto pt-6 text-xs sm:text-sm text-gray-400">
+        <div className="mt-8 text-xs sm:text-sm text-gray-400">
         <p>Password Generator v{APP_VERSION}</p>
       </div>
       </div>
