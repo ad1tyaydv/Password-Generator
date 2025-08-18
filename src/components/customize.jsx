@@ -24,7 +24,6 @@ function Customize({
         <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 w-full max-w-2xl">
             <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Customize your password</h2>
             
-            {/* Password Length */}
             <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                     Password Length: {length}
@@ -49,8 +48,6 @@ function Customize({
                 </div>
             </div>
 
-            {/* Rest of your component remains the same... */}
-            {/* Complexity Options */}
             <div className="mb-4">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-2 sm:gap-4 mb-2">
                     <label className="flex items-center gap-2 text-sm sm:text-base">
@@ -86,7 +83,6 @@ function Customize({
                 </div>
             </div>
 
-            {/* Character Types */}
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-4 mb-6">
                 <label className="flex items-center gap-2 text-sm sm:text-base">
                     <input
@@ -130,7 +126,6 @@ function Customize({
                 </label>
             </div>
 
-            {/* Generate Button and Social Links */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 p-2 sm:p-4">
                 <div className="order-2 sm:order-1 flex gap-4 sm:gap-6">
                     <a
@@ -152,7 +147,7 @@ function Customize({
                         <FaGithubSquare />
                     </a>
                     <a
-                        href="https://github.com/ad1tyaydv"
+                        href="https://x.com/adityadotdev"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-900 hover:text-gray-700 text-2xl sm:text-3xl transition-colors"
