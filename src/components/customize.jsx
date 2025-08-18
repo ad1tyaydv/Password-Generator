@@ -1,6 +1,7 @@
+
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 
-function Customize({
+export default function Customize({
     onGenerate,
     length,
     setLength,
@@ -21,13 +22,10 @@ function Customize({
     };
 
     return (
-        <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 w-full max-w-2xl">
+        <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 w-full">
             <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Customize your password</h2>
-            
             <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Password Length: {length}
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Password Length: {length}</label>
                 <div className="flex items-center gap-3 sm:gap-4">
                     <input 
                         type="number"
@@ -47,7 +45,6 @@ function Customize({
                     />
                 </div>
             </div>
-
             <div className="mb-4">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-2 sm:gap-4 mb-2">
                     <label className="flex items-center gap-2 text-sm sm:text-base">
@@ -82,7 +79,6 @@ function Customize({
                     </label>
                 </div>
             </div>
-
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 sm:gap-4 mb-6">
                 <label className="flex items-center gap-2 text-sm sm:text-base">
                     <input
@@ -125,47 +121,22 @@ function Customize({
                     <span>Symbols</span>
                 </label>
             </div>
-
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 p-2 sm:p-4">
                 <div className="order-2 sm:order-1 flex gap-4 sm:gap-6">
-                    <a
-                        href="https://www.linkedin.com/in/aditya-yadav-612695323/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-900 hover:text-blue-700 text-2xl sm:text-3xl transition-colors"
-                        aria-label="LinkedIn"
-                    >
+                    <a href="https://www.linkedin.com/in/aditya-yadav-612695323/" target="_blank" rel="noopener noreferrer" className="text-blue-900 hover:text-blue-700 text-2xl sm:text-3xl transition-colors" aria-label="LinkedIn">
                         <FaLinkedin />
                     </a>
-                    <a
-                        href="https://github.com/ad1tyaydv"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-900 hover:text-gray-700 text-2xl sm:text-3xl transition-colors"
-                        aria-label="GitHub"
-                    >
+                    <a href="https://github.com/ad1tyaydv" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-gray-700 text-2xl sm:text-3xl transition-colors" aria-label="GitHub">
                         <FaGithubSquare />
                     </a>
-                    <a
-                        href="https://x.com/adityadotdev"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-900 hover:text-gray-700 text-2xl sm:text-3xl transition-colors"
-                        aria-label="GitHub"
-                    >
+                    <a href="https://x.com/adityadotdev" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-gray-700 text-2xl sm:text-3xl transition-colors" aria-label="Twitter">
                         <FaTwitterSquare />
                     </a>
                 </div>
-                
-                <button
-                    onClick={onGenerate}
-                    className="order-1 sm:order-2 bg-red-600 text-white px-6 sm:px-8 py-2 rounded-xl hover:bg-red-700 transition-all duration-100 w-full sm:w-auto text-sm sm:text-base"
-                >
+                <button onClick={onGenerate} className="order-1 sm:order-2 bg-red-600 text-white px-6 sm:px-8 py-2 rounded-xl hover:bg-red-700 transition-all duration-100 w-full sm:w-auto text-sm sm:text-base">
                     Generate Password
                 </button>
             </div>
         </div>
     );
 }
-
-export default Customize;
