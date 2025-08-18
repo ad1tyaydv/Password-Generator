@@ -1,4 +1,4 @@
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 
 function Customize({
     onGenerate,
@@ -150,6 +150,15 @@ function Customize({
                         aria-label="GitHub"
                     >
                         <FaGithubSquare />
+                    </a>
+                    <a
+                        href="https://github.com/ad1tyaydv"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-900 hover:text-gray-700 text-2xl sm:text-3xl transition-colors"
+                        aria-label="GitHub"
+                    >
+                        <FaTwitterSquare />
                     </a>
                 </div>
                 
