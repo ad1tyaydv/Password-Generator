@@ -75,15 +75,6 @@ export default function PasswordGenerate() {
                 <FaGithub className="text-lg" />
                 <span>Star Project</span>
             </a>
-
-                <a
-                    href="https://github.com/ad1tyaydv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-2xl text-purple-400 hover:text-purple-500"
-                >
-                    <FaGithub />
-                </a>
             </div>
 
           <div className="w-full max-w-2xl mb-4 sm:mb-6 md:mb-8 relative">
