@@ -49,11 +49,11 @@ export default function PasswordGenerate() {
 
     return (
         <div className="min-h-screen bg-[#133251] flex flex-col md:flex-row">
-            <div className="hidden md:flex md:w-1/2 lg:w-2/5 bg-[#133251]">
+            <div className="w-full md:w-1/2 lg:w-2/5 bg-[#133251] flex items-center">
                 <TextFile />
             </div>
 
-            <div className="w-full md:w-1/2 lg:w-3/5 flex flex-col px-4 md:px-8 py-8">
+            <div className="w-full md:w-1/2 lg:w-3/5 flex flex-col px-4 sm:px-6 md:px-8 py-6 sm:py-8">
                 <header className="md:hidden py-4">
                     <h1 className="text-white text-2xl sm:text-3xl text-center font-bold">
                         Password Generator
