@@ -57,11 +57,11 @@ export default function PasswordGenerate() {
   }
 
   return (
-    <div className="min-h-screen bg-[#133251] flex flex-col md:flex-row">
-      <div className="hidden md:flex md:w-1/2 lg:w-2/5 bg-[#133251]">
+    <div className="min-h-screen bg-[#F5F5F5] flex flex-col md:flex-row">
+      <div className="hidden md:flex md:w-1/2 lg:w-2/5 bg-[#F5F5F5]">
         <TextFile />
       </div>
-      <div className="md:hidden w-full bg-[#133251]">
+      <div className="md:hidden w-full bg-[#F5F5F5]">
         <TextFile />
       </div>
 
