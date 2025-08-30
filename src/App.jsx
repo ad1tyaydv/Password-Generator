@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import Login from "./components/login";
 import PasswordGenerate from "./components/passwordgenerator"
-
+import PasswordTips from "./components/passwordtips";
 
 function App() {
 
@@ -10,7 +9,10 @@ function App() {
   }, []);
 
   return (
-    <PasswordGenerate />
+    <>
+      <PasswordGenerate />
+      <PasswordTips />
+    </>
   );
 }
 

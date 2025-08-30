@@ -65,7 +65,6 @@ export default function PasswordGenerate() {
         <TextFile />
       </div>
 
-      {/* Mobile-only generate button */}
       <div className="mt-6 sm:mt-8 md:hidden w-full px-4">
         <button
           onClick={scrollToGenerator}

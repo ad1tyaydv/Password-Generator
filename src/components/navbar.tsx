@@ -5,22 +5,17 @@ import { FaUserCircle } from "react-icons/fa";
 export default function Navbar() {
   return (
     <header className="w-full bg-white shadow-sm px-4 py-3 flex justify-between items-center fixed top-0 z-50">
-      {/* Left side (can be empty or logo) */}
-      <div></div>
 
-      {/* Center or Right - GitHub Star Button */}
       <div className="flex items-center gap-3">
         <button className="flex items-center gap-2 border px-3 py-1.5 rounded-full hover:shadow-md transition text-sm font-medium">
           <FaGithub className="text-lg" />
           <span>Star Project</span>
         </button>
 
-        {/* Menu Icon */}
         <button className="text-xl hover:text-gray-600">
           <HiOutlineMenu />
         </button>
 
-        {/* Profile Icon */}
         <button className="text-2xl text-purple-500 hover:text-purple-600">
           <FaUserCircle />
         </button>
